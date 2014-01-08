@@ -1,0 +1,30 @@
+[user]
+	name = Frank Sarubbi
+	email = fsarubbi@gmail.com
+[color]
+	diffbranch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[alias]
+	llog = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(blue)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	ci = commit 
+	st = status
+	stat = status
+	co = checkout 
+	mg = merge --no-ff
+	br = branch -a
+	up = pull
+[core]
+	excludesfile = /Users/fsarubbi/.gitignore_global
+	editor = subl -w
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
