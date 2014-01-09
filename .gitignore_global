@@ -1,2 +1,39 @@
 *~
-.DS_Store
+# /
+/.classpath
+/.project
+/.settings
+/target
+/.pmd
+
+#java files to ignore
+*.class
+*target/
+*dependency-reduced-pom.xml
+
+## svn files
+*.svn/
+
+## Eclipse files
+.project
+.metadata
+.classpath
+.settings/
+*.pmd
+
+## Idea Files
+/.idea
+*.iml
+
+## Jmeter
+*.jtl
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.log
+*.log.*
+*.tlog
