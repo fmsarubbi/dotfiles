@@ -1,0 +1,20 @@
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/bin/_bashrc_gitbranch: bin/_bashrc_gitbranch
+    ~/.config: config/
+    ~/.bash: bash/dotbash/
+    ~/.bashrc: bash/bashrc
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore_global: git/.gitignore_global
+
+- shell:
+  - which brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  - which zsh || brew install zsh

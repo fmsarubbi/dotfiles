@@ -1,0 +1,28 @@
+#!/usr/bin/python2.7
+
+from __future__ import print_function
+import os
+import sys
+
+w = os.getcwd()
+ok = False
+while True:
+    fn = os.path.join(w, ".git", "HEAD")
+    try:
+        with open(fn) as f:
+            line = f.readline().strip()
+    except:
+        pass
+    else:
+        ok = True
+        break
+    if w == "/": break
+    w = os.path.dirname(w)
+
+if ok:
+    if line.startswith("ref: refs/heads/"):
+        line = line[16:]
+    else:
+        line = "detached " + line
+    print(" ({})".format(line))
+    sys.stdout.flush()

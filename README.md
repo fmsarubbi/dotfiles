@@ -1,9 +1,18 @@
+# Install
+Run
+```bash
+./install
+```
+That won't overwrite any existing dotfiles; you'll have to stash them manually before running it if you want to keep them.
+Also run as `./install`
+
+# Prompt
 The Prompt file generates Prompts looking like:
 ```
 -------------------------------------------------------------------------------------------- 11:46:04
-fsarubbi@frankss-mbp:/zinio/eclipse/workspace$ cd CorePlatform/
+fsarubbi@frankss-mbp:~/workspace$ cd CorePlatform/
 -------------------------------------------------------------------------------------------- 11:46:09
-fsarubbi@frankss-mbp:/zinio/eclipse/workspace/CorePlatform[develop*]$ 
+fsarubbi@frankss-mbp:~/workspace/CorePlatform[develop*]$ 
 ```
 
 First prompt regular directory

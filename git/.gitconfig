@@ -1,0 +1,42 @@
+[status-tree]
+	indent = 4
+[user]
+	name = Frank Sarubbi
+	email = fsarubbi@gmail.com
+[color]
+	diffbranch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[alias]
+	llog = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(blue)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	llog2 = log --graph --pretty=format:'%C(yellow)%h%Creset %C(bold blue)%an%Creset -%C(bold cyan)%d%Creset %s %C(green)(%cr)%Creset' --abbrev-commit --date=relative
+	ci = commit 
+	st = status
+	stat = status
+	co = checkout 
+	mg = merge --no-ff
+	br = branch -a
+	up = pull
+[core]
+	excludesfile = /Users/fsarubbi/.gitignore_global
+	editor = subl -w
+[push]
+	default = current
+[credential]
+	helper = osxkeychain
+[bulkworkspaces]
+	workspace = /Users/fsarubbi/Workspace
