@@ -11,8 +11,18 @@ return 0
 
 
 source /etc/bashrc_fitbit
-export PATH="${HOME}/.local/bin:${HOME}/bin:/usr/local/gnu/bin:/usr/local/bin:/usr/local/sbin:${PATH}"
-export MANPATH="/usr/local/gnu/man:/usr/local/share/man:/usr/share/man${MANPATH:+:$MANPATH}"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export JAVA_HOME='/usr/local/opt/adoptopenjdk-openjdk8'
 
+# BEGIN ANSIBLE MANAGED BLOCK
+XCODE="$(xcode-select -p 2>/dev/null || echo /Applications/Xcode.app/Contents/Developer)"
+PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/Library/Python/3.7/bin:${HOME}/Library/Python/2.7/bin:/usr/local/gnu/bin:/usr/local/bin:/usr/local/sbin:${PATH}"; export PATH
+MANPATH="/usr/local/gnu/man:/usr/local/share/man:/usr/share/man:${XCODE}/Toolchains/XcodeDefault.xctoolchain/usr/share/man:${XCODE}/usr/share/man"; export MANPATH
+JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"; export JAVA_HOME
+HOMEBREW_CASK_OPTS="--appdir=/Applications"; export HOMEBREW_CASK_OPTS
+HOMEBREW_NO_ENV_FILTERING=1; export HOMEBREW_NO_ENV_FILTERING
+HOMEBREW_NO_AUTO_UPDATE=1; export HOMEBREW_NO_AUTO_UPDATE
+HOMEBREW_NO_UPDATE_CLEANUP=1; export HOMEBREW_NO_UPDATE_CLEANUP
+# END ANSIBLE MANAGED BLOCK
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -1,9 +1,3 @@
-#GREEN="\[\e[0;32m\]"
-#BLUE="\[\e[0;36m\]"
-#PLAIN="\[\e[m\]"
-#PS1="${GREEN}\u ${BLUE}(\w)$ ${PLAIN}"
-#PS1="\[\e]0;\]\h (\w)\a\]\u[\w]\$ "
-
 GREEN_STYLE="$(_bashrc_color '0;32')"
 BLUE_STYLE="$(_bashrc_color '0;36')"
 BOLD_BLUE_STYLE="$(_bashrc_color '1;36')"
@@ -24,7 +18,6 @@ BOLD_BLACK_STYLE="$(_bashrc_color '1;29')"
 fill="--- "
 
 # Prompt variable:
-
 function parse_git_dirty {
   [[ -z $(git ls-files --exclude-standard --others --error-unmatch 2>/dev/null)  ]] || echo "*"
 }
